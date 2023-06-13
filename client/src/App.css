@@ -1,0 +1,167 @@
+* {
+    margin: auto;
+}
+
+:root {
+    --main-color: rgb(232, 33, 23);
+    --main-transparent-color: rgb(231, 33, 22, 0);
+    --second-color: #ffe8e8;
+    --second-transparent-color: rgba(255, 243, 240, 0);
+    --third-color: #632828;
+    --fourth-color: #ffdbdb;
+}
+
+body{
+    background-color: var(--second-color);
+}
+
+.fatTitle {
+    font-size: 20em;
+    position: absolute;
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  font-family: 'Humane';
+  left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--main-color);
+
+}
+
+.fatTitle h1 {
+    margin-top: 10%;
+}
+
+.burgerIcon {
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav{
+    position: absolute;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
+
+.divIcon {
+    cursor: pointer;
+}
+
+.burgerDiv {
+    height: 4px;
+    width: 35px;
+    background-color: var(--main-color);
+    transition: 0.3s ease;
+}
+
+.burgerMargin {
+    margin-bottom: 6px;
+}
+
+.divIcon:hover .burgerDiv {
+    width: 48px;
+    transform: rotate(-5deg);
+}
+
+.menu {
+    background-color: var(--second-color);
+    border-left: 3px solid var(--main-color);
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    right: 0;
+    transition: 0.5s ease;
+}
+
+.menuWrap {
+    height: 100vh;
+    width: 450px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    display: none;
+}
+
+.slide {
+    display: block;
+}
+
+@media (orientation: portrait) {
+    .menuWrap {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-height: 400px) {
+   .menuWrap {
+        width: 100vw;
+    }
+}
+
+.menu-open {
+    width: 100%;
+}
+
+.menu .close {
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+
+.close svg {
+    cursor: pointer;
+    position: absolute;
+    top: 7.5px;
+    left: 7.5px;
+    width: 24px;
+    filter: invert(23%) sepia(81%) saturate(4977%) hue-rotate(353deg) brightness(92%) contrast(97%);
+    transition: 0.3s ease;
+    transition-delay: 0.1s;
+}
+
+.close svg:hover {
+    transform: rotate(90deg);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+ul {
+    text-align: left;
+    width: 100%;
+    list-style: none;
+}
+
+ul a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+li {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: bold;
+    text-transform: lowercase;
+    font-size: 45px;
+}
+
+li:hover * {
+    letter-spacing: 1px;
+}
